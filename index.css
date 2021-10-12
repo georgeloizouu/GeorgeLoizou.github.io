@@ -37,40 +37,7 @@ color: rgb(255, 255, 255);
 
     }
     
-    #loader {
-        margin: 150px auto 50px auto;
-        width: 120px;
-        height: 120px;
-        border: 16px solid Gainsboro;
-        border-radius: 50%;
-        border-top: 16px solid #9d6f2a;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
-    }
-    
-    #loadermsg {
-        position: relative;
-        font-weight: bold;
-        font-family: Inter,sans-serif;
-        color: #E9C46A;
-        font-size: 20px; 
-        letter-spacing: 1px; 
-        line-height: 1; 
-        text-align: center;
-    }
-    
-    @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-    }
-    
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    
-    
-    /* Button Format */
+  
     .button-56 {
         align-items: center;
         margin: 10px;
