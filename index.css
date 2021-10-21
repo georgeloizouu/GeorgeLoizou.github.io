@@ -37,17 +37,52 @@ color: rgb(255, 255, 255);
 
     }
     
-  
+    #loader {
+        margin: 150px auto 50px auto;
+        width: 120px;
+        height: 120px;
+        border: 16px solid Gainsboro;
+        border-radius: 50%;
+        border-top: 16px solid #9d6f2a;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+    
+    #loadermsg {
+        position: relative;
+        font-weight: bold;
+        font-family: Inter,sans-serif;
+        color: #E9C46A;
+        font-size: 20px; 
+        letter-spacing: 1px; 
+        line-height: 1; 
+        text-align: center;
+    }
+    
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    #container {
+        text-align: center;
+      }    
+    
+    /* Button Format */
     .button-56 {
         align-items: center;
-        margin: 10px;
-        background-color: #534126;
+        margin: auto;
+        background-color: rgb(207, 129, 12);
         border: 2px solid #111;
         border-radius: 8px;
         box-sizing: border-box;
         color: rgb(233, 227, 227);
         cursor: pointer;
-        display: flex;
+        display: inline-block;
         font-family: Inter,sans-serif;
         font-size: 16px;
         height: 48px;
@@ -67,7 +102,6 @@ color: rgb(255, 255, 255);
         background-color: #111;
         border-radius: 8px;
         content: "";
-        display: block;
         height: 48px;
         left: 0;
         width: 100%;
@@ -95,6 +129,8 @@ color: rgb(255, 255, 255);
         .button-56 {
         padding: 0 40px;
       }
-
+      
+      
+      
 
 }
