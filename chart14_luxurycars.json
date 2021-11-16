@@ -14,7 +14,7 @@
   },
   "mark": {"type": "bar", "color": "#b64b0d", "strokeWidth": 2, "opacity": 1},
   "height": 300,
-  "width": 250,
+  "width": 200,
   "encoding": {
     "x": {
       "field": "Price in millions",
