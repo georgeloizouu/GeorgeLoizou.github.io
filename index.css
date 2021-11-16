@@ -24,18 +24,52 @@ p{font-family: 'Poppins', sans-serif;
 color: rgb(255, 255, 255);
 }
 
+header {
+    font-family: Inter,sans-serif;
+    font-size: 90px; 
+    font-weight: bold;
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;  
+}
+
+.title1 {
+    font-family: Inter,sans-serif;
+    color: rgb(245, 164, 43);
+    font-size: 20px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
+
+.bold {
+    font-weight:bold
+}
 
 
-.chart{
-    width: auto;
-    border-width: 1px;
-    background-color: white;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: white;
-    margin: auto;
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 400px;
+    height: 390px;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #2a9d8f solid 5px;
+    border-radius: 10px;
+    /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+}
 
-    }
+.container {
+    background-color: #122b39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
     
     #loader {
         margin: 150px auto 50px auto;
