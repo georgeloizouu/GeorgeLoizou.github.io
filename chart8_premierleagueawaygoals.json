@@ -5,8 +5,8 @@
     "format": {"type": "json", "property": "data"}
   },
   "title": {
-    "text": "Premier League - away goals scored by bottom 6",
-    "subtitle": ["Goals scored away, 20/21 season", ""],
+    "text": "Premier League - away goals scored by bottom 4",
+    "subtitle": ["Goals scored away, 20/21 season Source: Sportdata API"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -17,8 +17,6 @@
       "filter": {
         "field": "away_team.name",
         "oneOf": [
-          "Southampton FC",
-          "Brighton & Hove Albion",
           "Burnley FC",
           "Fulham FC",
           "West Bromwich Albion",
