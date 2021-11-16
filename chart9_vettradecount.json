@@ -10,11 +10,6 @@
     "color": "#d4bb29",
     "subtitleColor": "#d4bb29"
   },
-  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
-  "XYZ_data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-06-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4",
-    "format": {"type": "json"}
-  },
   "data": {
     "url": "https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-06-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4",
     "format": {"type": "json"}
@@ -35,7 +30,6 @@
         "title": null,
         "grid": true,
         "labelSeparation": 10,
-        "xyzticks": false,
         "domainColor": "dimgrey",
         "labelColor": "#070707",
         "tickColor": "pink",
@@ -51,7 +45,6 @@
         "grid": false,
         "domainColor": "dimgrey",
         "labelColor": "#000000",
-        "XYZlabelSeparation": 20,
         "tickColor": "pink",
         "gridColor": "dimgrey",
         "format": "$.2s"
