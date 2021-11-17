@@ -6,17 +6,21 @@
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
-    </style>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-      </style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
 
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -33,8 +37,51 @@
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
-<body> 
-  <h1>DATA SCIENCE 2021</h1>
+<body onLoad="show5()">
+  <span id="liveclock" style="position:absolute;right:0;top:0;">
+  </span>
+  
+  <script language="JavaScript">
+  /*
+  Upper Left Corner Live Clock Script Code and idea taken from (c) Dynamic Drive (www.dynamicdrive.com)
+  For full source visit http://www.dynamicdrive.com
+  */
+  function show5(){
+   if (!document.layers&&!document.all&&!document.getElementById)
+   return
+   var Digital=new Date()
+   var hours=Digital.getHours()
+   var minutes=Digital.getMinutes()
+   var seconds=Digital.getSeconds()
+   var dn="AM" 
+   if (hours>12){
+   dn="PM"
+   hours=hours-12
+   }
+   if (hours==0)
+   hours=12
+   if (minutes<=9)
+   minutes="0"+minutes
+   if (seconds<=9)
+   seconds="0"+seconds
+  //change font size here to your desire
+  myclock="<font size='5' color=white face='Arial' ><b><font size='2'>Current Time:</font></br>"+hours+":"+minutes+":"
+   +seconds+" "+dn+"</b></font>"
+  if (document.layers){
+  document.layers.liveclock.document.write(myclock)
+  document.layers.liveclock.document.close()
+  }
+  else if (document.all)
+  liveclock.innerHTML=myclock
+  else if (document.getElementById)
+  document.getElementById("liveclock").innerHTML=myclock
+  setTimeout("show5()",1000)
+   }
+  
+  //-->
+  </script>
+
+  <header><span class="orange">Data</span><span class="white">Science</span></header>
   <p><strong>George Loizou</strong></p>
 <p><strong>Student ID:1819940</strong></p>
 
