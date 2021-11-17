@@ -1,9 +1,9 @@
-/*this is my first proper CSS file */
+/*This is my CSS file */
 
 
 body{
 
-    background-color: #122b39 ;
+    background-color:#122b39 ;
     max-width: 450px;
     margin: auto;
 }
@@ -107,7 +107,7 @@ header {
       }    
     
     /* Button Format */
-    .button-56 {
+    .button-07 {
         align-items: center;
         margin: auto;
         background-color: rgb(207, 129, 12);
@@ -132,7 +132,7 @@ header {
         touch-action: manipulation;
         }
     
-    .button-56:after {
+    .button-07:after {
         background-color: #111;
         border-radius: 8px;
         content: "";
@@ -146,21 +146,21 @@ header {
         z-index: -1;
     }
     
-    .button-56:hover:after {
+    .button-07:hover:after {
         transform: translate(0, 0);
     }
     
-    .button-56:active {
+    .button-07:active {
         background-color: #274754;
         outline: 0;
     }
     
-        .button-56:hover {
+        .button-07:hover {
         outline: 0;
     }
     
     @media (min-width: 768px) {
-        .button-56 {
+        .button-07 {
         padding: 0 40px;
       }
       
