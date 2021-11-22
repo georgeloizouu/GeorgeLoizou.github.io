@@ -1,0 +1,181 @@
+/*this is my project CSS file */
+
+
+body{
+
+    background-color:#122b39 ;
+    max-width: 450px;
+    margin: auto;
+}
+
+h1{
+    size: initial;
+    font-size: xx-large;
+    color: rgb(245, 164, 43);
+    font-family: 'Anton', sans-serif ;
+}
+
+h3{
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif ;
+}
+
+p{font-family: 'Poppins', sans-serif;
+color: rgb(255, 255, 255);
+font-size: 20px; 
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 55px; 
+    font-weight: bold;
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;  
+}
+
+.title1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(245, 164, 43);
+    font-size: 15px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
+
+.bold {
+    font-weight:bold
+}
+
+.orange {
+    color: rgb(245, 164, 43);
+}
+
+.white {
+    color: #f3f0f0;
+}
+
+
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 400px;
+    height: 390px;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #2a9d8f solid 5px;
+    border-radius: 10px;
+ /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+}
+
+.container {
+    background-color: #122b39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+    
+    #loader {
+        margin: 150px auto 50px auto;
+        width: 120px;
+        height: 120px;
+        border: 16px solid Gainsboro;
+        border-radius: 50%;
+        border-top: 16px solid #9d6f2a;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+    
+    #loadermsg {
+        position: relative;
+        font-weight: bold;
+        font-family: Inter,sans-serif;
+        color: #E9C46A;
+        font-size: 20px; 
+        letter-spacing: 1px; 
+        line-height: 1; 
+        text-align: center;
+    }
+    
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    #container {
+        text-align: center;
+      }    
+    
+    /* Button 07 */
+    .button-07 {
+        align-items: center;
+        margin: auto;
+        background-color: rgb(207, 129, 12);
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: rgb(233, 227, 227);
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter,sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+    
+    .button-07:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+    
+    .button-07:hover:after {
+        transform: translate(0, 0);
+    }
+    
+    .button-07:active {
+        background-color: #274754;
+        outline: 0;
+    }
+    
+        .button-07:hover {
+        outline: 0;
+    }
+    
+    @media (min-width: 768px) {
+        .button-07 {
+        padding: 0 40px;
+      }
+      
+      
+      
+
+}
