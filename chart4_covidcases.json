@@ -16,7 +16,7 @@
     {
       "filter": {
         "field": "areaName",
-        "oneOf": ["Bristol, City of", "Liverpool"]
+        "oneOf": ["Bristol, City of", "Liverpool","Hounslow"]
       }
     }
   ],
