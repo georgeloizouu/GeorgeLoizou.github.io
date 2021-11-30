@@ -21,7 +21,7 @@
   },
   "mark": {"type": "bar", "color": "#b69d0d", "strokeWidth": 2, "opacity": 1},
   "height": 300,
-  "width": 350,
+  "width": 300,
   "encoding": {
     "x": {"field": "Brand", "type": "nominal", "axis": {"labelAngle": 0}},
     "y": {"field": "share of litter", "type": "quantitative"}
