@@ -71,7 +71,7 @@
     },
     "tooltip": [
       {"field": "date", "type": "temporal", "format": "%b-%Y", "title": "Date"},
-      {"field": "value", "type": "quantitative", "title": "Price"}
+      {"field": "value", "type": "quantitative", "title": "Price in $"}
     ]
   }
 }
