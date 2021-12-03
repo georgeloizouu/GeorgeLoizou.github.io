@@ -26,8 +26,8 @@ font-size: 20px;
 }
 
 header {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 55px; 
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 100px; 
     font-weight: bold;
     letter-spacing: -1px; 
     line-height: 1; 
@@ -35,9 +35,9 @@ header {
 }
 
 .title1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'M PLUS 1 Code', sans-serif;
     color: rgb(245, 164, 43);
-    font-size: 15px; 
+    font-size: 25px; 
     letter-spacing: 1px; 
     line-height: 1; 
     text-align: center;
@@ -71,6 +71,19 @@ header {
     font-family: Inter,sans-serif;
     font-size: 10pxp;
     
+}
+.pngchart {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #2a9d8f solid 5px;
+    border-radius: 10px;
+    /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
 }
 
 .container {
