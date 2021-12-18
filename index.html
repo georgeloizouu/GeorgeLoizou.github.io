@@ -7,7 +7,7 @@
 
 <head>
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
 
 <link rel="stylesheet" href="index.css">
@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 </style>
 </style>
+
 
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -38,19 +39,18 @@
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
-
+ 
   <header><span class="orange">Data</span><span class="white">Science</span></header>
+  
+  <div class="container"></div>
   <p><strong>George Loizou</strong></p>
 <p><strong>Student ID:1819940</strong></p>
+</div>
 
-<p>Hello and welcome to my personal website.I am currently a 3rd year student at the 
-  University of Bristol studying BSc Economics and I've created this website to document my
-  work for the "Data Science" module.
-</p>
-  
-  <div class="container">
+    <div class="container">
     <button class="button-07" onclick="location.href='project.html'">Project</button>
    <button class="button-07" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
+   <button class="button-07" onclick="location.href='https://rapidcharts.io/datascience'">Course Site</button>
 </div>
 
 <p class=title1><span class="bold">Week 1 - Embedding</span></p>
@@ -65,7 +65,7 @@
   </div>
 
 <!--Chart 2 -->
-<div class="chart" id="chart2">
+<div class="chart3" id="chart2">
     <script>
       var myChart2 = "chart2_ukProductivity.json";
       vegaEmbed('#chart2', myChart2);
@@ -117,7 +117,7 @@
 </div>
 
 <!--Chart 7 -->
-<div class="chart" id="chart7">
+<div class="chart3" id="chart7">
   <script>
     var myChart7 = "chart7_ukbeachlitter.json";
     vegaEmbed('#chart7', myChart7);
@@ -131,7 +131,7 @@
 <div class="container">
 
 <!--Chart 8 -->
-<div class="chart" id="chart8">
+<div class="chart2" id="chart8">
   <script>
     var myChart8 = "chart8_premierleagueawaygoals.json";
     vegaEmbed('#chart8', myChart8);
@@ -139,7 +139,7 @@
 </div>
 
 <!--Chart 9 -->
-<div class="chart" id="chart9">
+<div class="chart2" id="chart9">
   <script>
     var myChart9 = "chart9_vettradecount.json";
     vegaEmbed('#chart9', myChart9);
@@ -189,14 +189,7 @@
 </div>
 
 <p class=title1><span class="bold">Week 7 - Scraper</span></p>
-<p>The scraper built in Colab can be found <a class="textLink"
-                    href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/ScrapersHomework.ipynb"
-                    style="color:rgb(245, 164, 43);"> here</a>.
-            </p>
-        </div>
-
 <div class="container">
-
 <!--Chart 14 -->
 <div class="chart" id="chart14">
   <script>
@@ -204,7 +197,15 @@
     vegaEmbed('#chart14', myChart14);
   </script>
 </div>
+</div>
 
+
+<div class="container">
+  <p>The scraper built in Colab can be found <a class="textLink"
+    href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/ScrapersHomework.ipynb"
+    style="color:rgb(245, 164, 43);"> here</a>.
+</p>
+</div>
 </div>
 
 <p class=title1><span class="bold">Week 8 - Talking Economics</span></p>
@@ -228,17 +229,17 @@
 </div>
 
 <p class=title1><span class="bold">Week 9 - Advanced data analysis techniques: Regression</span></p>
-
-    <div class="container">
-      <!-- Happiness vs GDP per capita regression-->
-      <div class="pngchart">
-        <img src = "week9chart.png" />
-      </script>
-    </div>
-  </div>
+<div class="container">
+      <!-- Inequality vs GDP regression-->
+      <div class="chart" id="chart16">
+        <script>
+          var myChart16 = "GDPvsInequality.json";
+          vegaEmbed('#chart16', myChart16);
+        </script>
+      </div>
   <div class="container"></div>
          <p>This chart uses advanced data analysis to show the correlation between GDP and inequality in the US.
-          As shown, inequality tends to decrease as GDP increases.
+          As shown, inequality tends to decrease as GDP increases with an R-Squared value of 0.78 . This means that 78% of the variation in inequality is explained by GDP.
         </p>
       </div>
   </div>
@@ -246,20 +247,19 @@
 <p class=title1><span class="bold">Week 10 - Interactivity</span></p>
 
 <div class="container">
-
-<!--Chart 18 -->
-<div class="chart" id="chart18">
+<!--Chart 17 -->
+<div class="chart" id="chart17">
   <script>
-    var myChart18 = "btcgraphforproject.json";
-    vegaEmbed('#chart18', myChart18);
+    var myChart17 = "btcgraphforproject.json";
+    vegaEmbed('#chart17', myChart17);
   </script>
 </div>
 
-<!--Chart  -->
-<div class="chart" id="chart19">
+<!--Chart 18  -->
+<div class="chart" id="chart18">
   <script>
-    var myChart19 = "interactivechart1.json";
-    vegaEmbed('#chart19', myChart19);
+    var myChart18 = "interactivechart1.json";
+    vegaEmbed('#chart18', myChart18);
   </script>
 </div>
 
