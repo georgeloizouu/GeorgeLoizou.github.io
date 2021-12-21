@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Inflation Expectations",
+    "subtitle": "Monthly inflation expectation data. Source: AplhaVantage",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://www.alphavantage.co/query?function=INFLATION_EXPECTATION&apikey=BCIX7LVQW458HQQK",
+    "format": {"type": "json", "property": "data"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "point": false, "color": "darkorange"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false},
+      "scale": {"domain": [0, 15]}
+    }
+  },
+  "config": {}
+}
