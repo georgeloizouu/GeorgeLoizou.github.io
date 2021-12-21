@@ -27,7 +27,7 @@
       "type": "quantitative",
       "title": null,
       "axis": {"grid": false},
-      "scale": {"domain": [0, 15]}
+      "scale": {"domain": [0, 12]}
     }
   },
   "config": {}
