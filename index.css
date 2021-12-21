@@ -75,6 +75,7 @@ header {
     border-radius: 10px;
     font-family: Inter,sans-serif;
     font-size: 10pxp;
+    transition: border-radius 400ms, flex-grow 1000ms;
 }
 .chart2 {
     width: 400px;
@@ -86,6 +87,7 @@ header {
     border-radius: 10px;
     font-family: Inter,sans-serif;
     font-size: 10pxp;
+    transition: border-radius 400ms, flex-grow 1000ms;
 }
 .chart3 { 
     width: 409px;
@@ -97,9 +99,18 @@ header {
     border-radius: 10px;
     font-family: Inter,sans-serif;
     font-size: 10pxp;
-    
-    
+    transition: border-radius 400ms, flex-grow 1000ms;   
 }
+.chart:hover {
+    border-color: rgb(245, 164, 43);
+    border-radius: 5px;
+    flex-grow: 0.1;
+  }
+  .chart2:hover {
+    border-color: rgb(245, 164, 43);
+    border-radius: 5px;
+    flex-grow: 0.1;
+  }
 
 .container {
     display: flex;
