@@ -29,6 +29,14 @@ header {
     text-align: center;  
 }
 
+.title {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
 .title1 {
     font-family: 'M PLUS 1 Code', sans-serif;
     color: rgb(245, 164, 43);
@@ -49,7 +57,13 @@ header {
 .white {
     color: #f3f0f0;
 }
-
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 15px;
+    color: white;
+  }
 
 .chart { 
     width: 400px;
@@ -87,19 +101,6 @@ header {
     
 }
 
-/*.pngchart {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    margin: 10px;
-    padding: 5px;
-    background-color: White;
-    border: #2a9d8f solid 5px;
-    border-radius: 10px;
-    font-family: Inter,sans-serif;
-    font-size: 10pxp;
-}*/
-
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -111,22 +112,32 @@ header {
     justify-content: center;
 }
     
+    
+    #container {
+        text-align: center;
+      }    
+
+  
+/*LOADER idea from https://www.w3schools.com/howto/howto_css_loader.asp*/
     #loader {
         margin: 150px auto 50px auto;
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border: 16px solid Gainsboro;
         border-radius: 50%;
-        border-top: 16px solid #9d6f2a;
+        border-top: 16px solid rgb(207, 129, 12);
+        border-right: 16px solid green;
+        border-bottom: 16px solid rgb(0, 17, 255);
+        border-left: 16px solid rgb(255, 255, 255);
         -webkit-animation: spin 2s linear infinite;
         animation: spin 2s linear infinite;
     }
     
-    #loadermsg {
+    #loadermessage {
         position: relative;
         font-weight: bold;
         font-family: Inter,sans-serif;
-        color: #E9C46A;
+        color: rgb(207, 129, 12);
         font-size: 20px; 
         letter-spacing: 1px; 
         line-height: 1; 
@@ -142,13 +153,78 @@ header {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
-    #container {
-        text-align: center;
-      }    
     
-    /* Button 07 (layout and code from https://www.w3schools.com/css/default.asp)*/
-    .button-07 {
-        align-items: center;
+    /* Animation from https://www.w3schools.com/w3css/w3css_animate.asp */
+    .fadeanimation {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+    }
+    
+    @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+    }
+    
+    @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+    }
+    
+    #Div01 {
+        display: none;
+        text-align: center;
+    }
+
+    /* Buttons layout and code from https://getcssscan.com/css-buttons-examples */
+.button-73 {
+    align-items: center;
+    margin: 10px;
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-73:hover {
+    background-color: rgb(207, 129, 12);
+    box-shadow: rgb(207, 129, 12) 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button-73:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button-73 {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  } 
+  /* Practice button*/
+  .button-07 {
+    align-items: center;
     margin: 10px;
     background-color: rgb(207, 129, 12);
     border: 2px solid #111;
@@ -217,16 +293,11 @@ header {
         #loadermsg {
             font-size: 15px;
         }
-        #loader {
-            margin: 50px auto 50px auto;
-        }
-        .pngchart {
-            width: 390px;
-        }
         .button-07 {
             padding: 0 20px;
         } 
         .button-07:after {
             transform: translate(6px, 6px);
         }
+       
     }
