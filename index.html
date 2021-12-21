@@ -38,23 +38,27 @@
 
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
-
- 
-  <header><span class="orange">Data</span><span class="white">Science</span></header>
+<body onload="myFunction()"> 
+  <!-- ///////////////////  LOADER  //////////////////////////////////// -->
+<div id="loader"></div>
   
-  <div class="container"></div>
-  <p><strong>George Loizou</strong></p>
-<p><strong>Student ID:1819940</strong></p>
-</div>
+<div id="loadermessage">Loading data...</div>
+ 
+<div style="display:none;" id="Div01" class="fadeanimation">
 
+<header><span class="orange">Data</span><span class="white">Science</span></header>
+  
+
+<p class=title>George Loizou: Data Visualisation Portfolio</p>
+<div class="topright">Student ID:1819940</div>
     <div class="container">
-    <button class="button-07" onclick="location.href='project.html'">Project</button>
-   <button class="button-07" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
-   <button class="button-07" onclick="location.href='https://rapidcharts.io/datascience'">Course Site</button>
+   <button class="button-73" onclick="location.href='https://georgeloizouu.github.io/GeorgeLoizou.github.io/'">Home</button>
+    <button class="button-73" onclick="location.href='project.html'">Project</button>
+   <button class="button-73" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
 </div>
 
+<!-- ///////////////////CHARTS BEGIN HERE//////////////////////////////////// -->
 <p class=title1><span class="bold">Week 1 - Embedding</span></p>
-
 <div class="container">
 <!--Chart 1 -->
   <div class="chart" id="chart1">
@@ -206,7 +210,6 @@
     style="color:rgb(245, 164, 43);"> here</a>.
 </p>
 </div>
-</div>
 
 <p class=title1><span class="bold">Week 8 - Talking Economics</span></p>
 
@@ -224,9 +227,7 @@
     of approximately 77%. Using data from Statista.com, I created a chart showing that this is true. As shown in the chart, during the three months to February 2020,
     just before the Covid lockdown employment was indeed at a record high of 77%. Interestingly, almost half of the growth in the employment rate
     came from the self-employed.</p>
-    </div>
 
-</div>
 
 <p class=title1><span class="bold">Week 9 - Advanced data analysis techniques: Regression</span></p>
 <div class="container">
@@ -242,7 +243,7 @@
           As shown, inequality tends to decrease as GDP increases with an R-Squared value of 0.78 . This means that 78% of the variation in inequality is explained by GDP.
         </p>
       </div>
-  </div>
+
 
 <p class=title1><span class="bold">Week 10 - Interactivity</span></p>
 
@@ -264,6 +265,21 @@
 </div>
 
 </div>
+
+
+<script>
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 4000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loadermessage").style.display = "none";
+    document.getElementById("Div01").style.display = "block";
+  }
+</script>
 
 </div>
 
