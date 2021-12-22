@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "US Unemployment Rate",
+  "title": {
+    "text": "Unemployment Rate in the US (1950-2020)",
+    "subtitle": "Percent, Seasonally Adjusted. Source: FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/data_FRED-UNRATE.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "point": "transparent", "color": "#e2121c"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "labelSeparation": 10}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "scale": {"domain": [0, 16]},
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}

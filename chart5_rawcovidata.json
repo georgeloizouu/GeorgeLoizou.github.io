@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "COVID-19 Cases: UK upper tier local authority",
+    "subtitle": "New cases by publish date, rolling rate",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "areaName",
+        "oneOf": ["Wolverhampton", "Bolton", "Barnsley"]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "point": false},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "newCasesByPublishDateRollingRate",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "areaName",
+      "type": "nominal",
+      "scale": {"scheme": "category10"},
+      "title": null,
+      "legend": {"orient": "top-right"}
+    }
+  },
+  "config": {}
+}
