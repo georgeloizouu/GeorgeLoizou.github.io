@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "title": {
+    "text": "US in 1960: GDP vs Inequality",
+    "subtitle": "Data from https://vincentarelbundock.github.io/Rdatasets/",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/UScrime.csv"
+  },
+  "width": 300,
+  "height": 300,
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {
+          "field": "GDP",
+          "type": "quantitative",
+          "title": "Gross Domestic Product"
+        },
+        "y": {"field": "Ineq", "type": "quantitative", "title": "Inequality"}
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "firebrick"},
+      "transform": [{"regression": "GDP", "on": "Ineq"}],
+      "encoding": {
+        "x": {"field": "GDP", "type": "quantitative"},
+        "y": {"field": "Ineq", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"regression": "GDP", "on": "Ineq", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -15
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ],
+  "config": {}
+}
