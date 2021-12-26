@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "US Inflation Expectations",
-    "subtitle": "Monthly inflation expectation data. Source: AplhaVantage",
+    "subtitle": "Monthly inflation expectation data. Source: AplhaVantage API",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -27,7 +27,7 @@
       "type": "quantitative",
       "title": null,
       "axis": {"grid": false},
-      "scale": {"domain": [0, 15]}
+      "scale": {"domain": [0, 12]}
     }
   },
   "config": {}
