@@ -67,7 +67,7 @@
       "field": "value",
       "type": "quantitative",
       "title": null,
-      "axis": {"grid": true, "format": "$,.5"}
+      "axis": {"grid": false, "format": "$,.5"}
     },
     "tooltip": [
       {"field": "date", "type": "temporal", "format": "%b-%Y", "title": "Date"},
