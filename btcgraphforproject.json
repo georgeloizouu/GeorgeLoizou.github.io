@@ -70,7 +70,7 @@
       "axis": {"grid": false, "format": "$,.5"}
     },
     "tooltip": [
-      {"field": "date", "type": "temporal", "format": "%b-%Y", "title": "Date"},
+      {"field": "date", "type": "temporal", "format": "%b-%d-%Y", "title": "Date"},
       {"field": "value", "type": "quantitative", "title": "Price in $"}
     ]
   }
