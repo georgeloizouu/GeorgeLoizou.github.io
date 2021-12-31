@@ -3,9 +3,9 @@
   "description": "Bitcoin (BTC) daily price",
   "title": {
     "text": "Bitcoin (BTC): Daily Price ",
-    "subtitle": "(Coinbase via FRED)",
+    "subtitle": "BTC price evolution from 2015 to 2021",
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 10,
+    "subtitleFontSize": 11,
     "anchor": "start",
     "color": "black"
   },
@@ -20,7 +20,9 @@
     "type": "line",
     "point": false,
     "interpolate": "linear",
-    "color": "orangered"
+    "color": "orange",
+    "strokeWidth":1.6,
+    "width":2
   },
   "transform": [
     {"calculate": "timeParse(datum.date, '%d/%m/%Y')", "as": "Date"},
@@ -70,7 +72,12 @@
       "axis": {"grid": false, "format": "$,.5"}
     },
     "tooltip": [
-      {"field": "date", "type": "temporal", "format": "%b-%d-%Y", "title": "Date"},
+      {
+        "field": "date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
       {"field": "value", "type": "quantitative", "title": "Price in $"}
     ]
   }
