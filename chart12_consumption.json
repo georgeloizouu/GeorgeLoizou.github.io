@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Consumption",
   "title": {
-    "text": "Personal Consumption Expenditures ",
+    "text": "Personal Consumption Expenditures in the US ",
     "subtitle": "Chain-type Price Index Source: FRED",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
