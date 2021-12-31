@@ -3,7 +3,7 @@
   "description": "",
   "title": {
     "text": "US in 1960: GDP vs Inequality",
-    "subtitle": "Data from https://vincentarelbundock.github.io/Rdatasets/",
+    "subtitle": "Linear Regression",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
