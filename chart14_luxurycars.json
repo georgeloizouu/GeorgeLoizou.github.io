@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Scraped data from https://www.beautifullife.info/",
   "title": {
-    "text": "Price of luxury cars in the US",
-    "subtitle": "Price in million $ source: https://www.beautifullife.info/",
+    "text": "US: Price of luxury cars",
+    "subtitle": "source: https://www.beautifullife.info/",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -12,16 +12,19 @@
   "data": {
     "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myscrapingdata.csv"
   },
-  "mark": {"type": "bar", "color": "#b64b0d", "strokeWidth": 2, "opacity": 1},
+  "mark": {"type": "bar", "color": "#b64b0d","opacity": 1},
   "height": 300,
   "width": 200,
   "encoding": {
     "x": {
       "field": "Price in millions",
       "type": "quantitative",
-      "axis": {"labelAngle": 0}
+      "axis": {"labelAngle": 0},
+      "title":"Price in millions ($)"
     },
-    "y": {"field": "Car Name", "type": "nominal"}
+    "y": {"field": "Car Name", "type": "nominal", "title":null}
   },
+  
+  
   "config": {}
 }
