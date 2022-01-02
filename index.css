@@ -109,6 +109,16 @@ body{
       font-size: 10pxp;
       transition: border-radius 400ms, flex-grow 1000ms;   
   }
+  .pngchart {
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #222222 solid 5px;
+    border-radius: 10px;
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+    transition: border-radius 400ms, flex-grow 1000ms;
+}
   .chart:hover {
       border-color: rgb(245, 164, 43);
       border-radius: 5px;
@@ -119,6 +129,11 @@ body{
       border-radius: 5px;
       flex-grow: 0.1;
     }
+    .pngchart:hover {
+        border-color: rgb(245, 164, 43);
+        border-radius: 5px;
+        flex-grow: 0.1;
+      }
   
   .container {
       display: flex;
