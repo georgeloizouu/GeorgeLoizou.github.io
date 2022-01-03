@@ -54,13 +54,12 @@
     <div class="container">
    <button class="button-73" onclick="location.href='https://georgeloizouu.github.io/GeorgeLoizou.github.io/'">Home</button>
     <button class="button-73" onclick="location.href='project.html'">Project</button>
-    <button class="button-73" onclick="location.href='sourcefiles.html'">Source Files</button>
    <button class="button-73" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
 </div>
 
 <!-- ///////////////////CHARTS BEGIN HERE//////////////////////////////////// -->
 <p class=title1><span class="bold">Week 1 - Embedding</span></p>
-<p>Embedding three charts - Two that were given in class and one that was taken from the repository of RapidCharts
+<p>Embedding three charts - Two that were given in class and one that was taken from the repository of RapidCharts.
 </p>
 <div class="container">
 <!--Chart 1 -->
@@ -90,7 +89,11 @@
 </div>
 
 <p class=title1><span class="bold">Week 2 - Hosting data (APIs and RAW data)</span></p>
-<p>Embedding two charts of my own design: (a) from a given API, (b) from the same/related data saved to my GitHub.</p>
+<p>Embedding two charts of my own design: (a) from a given API (see data <a class="textLink"
+  href="https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=newCasesByPublishDateRollingSum&format=csv"
+  style="color:rgb(245, 164, 43);">here)</a>, (b) from the same/related data saved to my GitHub <a class="textLink"
+  href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv"
+  style="color:rgb(245, 164, 43);">here</a>.</p>
 <div class="container">
 
 <!--Chart 4 -->
@@ -112,7 +115,11 @@
 </div>
 
 <p class=title1><span class="bold">Week 3 - Editing data, writing JSON by hand</span></p>
-<p>Two more charts. In the first one, I manipulated the data in Excel to add the UK/AU ratio. In the second one, I manually wrote “in-line” JSON points.</p>
+<p>Two more charts. In the first one, I manipulated the <a class="textLink"
+  href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/UKandAustraliaGDPratio.csv"
+  style="color:rgb(245, 164, 43);">data</a> in Excel to add the UK/AU ratio. In the second one, I manually wrote “in-line” JSON points from data found <a class="textLink"
+  href="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/chartENV17.csv"
+  style="color:rgb(245, 164, 43);">here</a>.</p>
 <div class="container">
 
 <!--Chart 6 -->
@@ -134,7 +141,11 @@
 </div>
 
 <p class=title1><span class="bold">Week 4 - API driven charts</span></p>
-<p>Two charts of my own design from two separate APIs that I signed up for & gained access to.</p>
+<p>Two charts of my own design from two separate APIs that I signed up for & gained access to. Links to the data (coinAPI:<a class="textLink"
+  href="https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-11-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4"
+  style="color:rgb(245, 164, 43);">here</a>) (AlphaVantageAPI:<a class="textLink"
+  href="https://www.alphavantage.co/query?function=INFLATION_EXPECTATION&apikey=BCIX7LVQW458HQQK"
+  style="color:rgb(245, 164, 43);">here</a>)</p>
 <div class="container">
 
 <!--Chart 8 -->
@@ -156,7 +167,11 @@
 </div>
 
 <p class=title1><span class="bold">Week 5 - API fetch and loops</span></p>
-<p>For these charts I downloaded code from FRED API using fetch in GoogleColab. I used a loop as shown in class to batch download the data I needed.</p>
+<p>For these charts I downloaded data from FRED API using fetch in GoogleColab.I used a loop as shown in class to batch download the data. (Access links: <a class="textLink"
+  href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/tree/main/FREDdata"
+  style="color:rgb(245, 164, 43);">Data</a>,<a class="textLink"
+  href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/Week5Homework.ipynb"
+  style="color:rgb(245, 164, 43);">ColabNotebook</a>)</p>
 
 <div class="container">
 <!--Chart 10 -->
@@ -179,7 +194,6 @@
 <div class="container">
 
 <!--Chart 12 -->
-<h3></h3>
 <div class="chart" id="chart12">
   <script>
     var myChart12 = "chart12_consumption.json";
@@ -197,9 +211,11 @@
 </div>
 
 <p class=title1><span class="bold">Week 7 - Scraper</span></p>
-<p>I built my own scraper to collect data on the prices of several cars I was interested in. The scraper built in GoogleColab can be found <a class="textLink"
+<p>I built my own scraper to collect data on the prices of several cars I was interested in. (Access links: <a class="textLink"
   href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/ScrapersHomework.ipynb"
-  style="color:rgb(245, 164, 43);"> here</a>.
+  style="color:rgb(245, 164, 43);"> Scraper</a>,<a class="textLink"
+  href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myscrapingdata.csv"
+  style="color:rgb(245, 164, 43);">Data</a>)
 </p>
 <div class="container">
 <!--Chart 14 -->
@@ -212,8 +228,10 @@
 </div>
 
 <p class=title1><span class="bold">Week 8 - Talking Economics</span></p>
-<p>During the 2nd "Talking Economics" session it was mentioned by Abi Adams Prassl that before the Covid lockdown the employment rate in the UK hit a record high
-  of approximately 77%. Using data from Statista.com, I created a chart showing that this is true. As shown in the chart, during the three months to February 2020,
+<p>During the 2nd "Talking Economics" session it was mentioned by Abi Adams Prassl that before the Covid lockdown the "employment rate in the UK hit a record high
+  of approximately 77%". Using data from statista.com that can be accessed <a class="textLink"
+  href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/UK%23employmentrate.csv"
+  style="color:rgb(245, 164, 43);"> here</a>, I created a chart showing that this is true. As shown in the chart, during the three months to February 2020,
   just before the Covid lockdown employment was indeed at a record high of 77%. Interestingly, almost half of the growth in the employment rate
   came from the self-employed.</p>
 <div class="container">
@@ -229,17 +247,27 @@
 
 <p class=title1><span class="bold">Week 9 - Advanced data analysis techniques: Regression</span></p>
 <p>This chart uses linear regression to show the relationship between BTC/USD and ETH/USD.
-  As shown the regression yields an R-Squared value of 0.82 . In this model, this indicates that 82% of the variation in the price of Ethereum is explained by variation in the price of Bitcoin.
+  As shown the regression yields an R-Squared value of 0.82 . In this model,this indicates that 82% of the variation in the price of Ethereum is explained by variation in the price of Bitcoin.
+  (Access links:<a class="textLink"
+  href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/BTCvsETH.ipynb"
+  style="color:rgb(245, 164, 43);">ColabNotebook</a>,<a class="textLink"
+  href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myregressiondata.csv"
+  style="color:rgb(245, 164, 43);">Data</a>)
 </p>
 <div class="container">
   <div class='container'>
-    <img src='chart16_ETHvsBTC.png' class='pngchart'>
+    <img src='ETHvsBTC.png' class='pngchart'>
     </div>
         </div>
 
 
 <p class=title1><span class="bold">Week 10 - Interactivity</span></p>
   <p>Two interactive charts. The first one uses sliders to select and adjust the time period and the second one uses a dropdown box that allows the selection of a specific area.
+    (Access links: <a class="textLink"
+    href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myinteractivedata"
+    style="color:rgb(245, 164, 43);">BTC Data</a>, <a class="textLink"
+    href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv"
+    style="color:rgb(245, 164, 43);">Covid Data</a>)
 </p>
 <div class="container">
 <!--Chart 17 -->
