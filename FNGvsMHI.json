@@ -1,0 +1,135 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+"data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/fngvsmhidata.csv"},
+
+    "transform": [
+  
+  {"calculate": "year(datum.date)", "as": "year"},
+
+  {"filter": "datum.year>=minYear"},
+  {"filter": "datum.year<=maxYear"}
+],
+
+
+
+
+  "params": [    
+    {"name":"minYear", "value":2020,
+       "bind":{
+         "input": "range",
+         "min": 2020, 
+         "max": 2021, 
+         "step": 1,
+         "name": "Start year:"}
+    },
+
+    {"name":"maxYear", "value":2021,
+       "bind":{
+         "input": "range",
+         "min": 2020, 
+         "max": 2021, 
+         "step": 1,
+         "name": "End year:"}
+    }
+  ],
+    
+ "title": {
+ "text": "Crypto Fear and Greed vs Coronavirus Media Hype",
+    "subtitle": "Fear and Greed (FNG) Index vs Coronavirus Hype Index (MHI) during the pandemic",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "rgb(245, 164, 43)",
+    "subtitleColor": "#0b3853"},
+
+
+  "width":340,
+  "height":340,
+  "encoding": {     
+      "x": {
+        "field": "date",
+        "title":null,
+        "type": "temporal"}
+        },
+          
+   "layer":[
+
+      {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1.5,
+          "width":1.5
+        },
+
+      "encoding": {
+          "y": {
+          "field": "fngvalue",
+          "type": "quantitative",
+          "title": "",
+          "axis": {
+            "grid": false,            
+            "labelColor":"red",
+            "format":",.5"}
+            },
+            
+          "color": {
+            "datum": "Crypto FNG Index",
+            "scale": {"range": ["blue", "red"]},
+            "legend":{
+              "orient": "bottom"}},
+               "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
+      {"field": "fngvalue", "type": "quantitative", "title": "Fear&Greed Index"}
+
+    ]
+  }
+   },
+      
+      
+
+     {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1.5
+        },
+
+      "encoding": {
+          "y": {
+          "field": "MHI",
+            "scale": {"domain": [0, 100]},
+          "type": "quantitative",
+          "title": "",
+          "axis": {
+            "grid": false,
+            "labelColor":"blue",
+            "format":",.5"}
+            },
+            
+          "color": {
+            "datum": "Covid19 Media Hype Index",
+            "legend":{
+              "orient": "bottom"}},
+              "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
+      {"field": "MHI", "type": "quantitative", "title": "Covid Media Hype Index"}
+
+    ]
+  }
+        
+        } 
+],
+
+    "resolve": {"scale": {"y": "independent"}} 
+}
