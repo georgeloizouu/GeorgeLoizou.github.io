@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Market Dominance: Top 3 cryptocurrencies vs Rest",
+    "subtitle": "Percentage (%) market dominance as of 04/01/2022",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "rgb(245, 164, 43)",
+    "subtitleColor": "#0b3853"
+  },
+  "data": {
+    "values": [
+      {"Cryptocurrency": "Bitcoin(BTC)", "Percentage Dominance": 39.4664},
+      {"Cryptocurrency": "Ethereum(ETH)", "Percentage Dominance": 20.2811},
+      {"Cryptocurrency": "Binance Coin(BNB)", "Percentage Dominance": 3.8308},
+      {"Cryptocurrency": "Rest", "Percentage Dominance": 36.4217}
+    ]
+  },
+  "height": 300,
+  "width": 230,
+  "mark": {
+    "type": "arc",
+    "innerRadius": 75,
+    "stroke": "#000000",
+    "tooltip": true
+  },
+  "encoding": {
+    "theta": {"field": "Percentage Dominance", "type": "quantitative"},
+    "color": {
+      "field": "Cryptocurrency",
+      "type": "nominal",
+      "scale": {"scheme": "category10"},
+      "sort": "ascending",
+      "legend": {"orient": "left", "fillColor": "#ffffff", "padding": 3}
+    }
+  },
+  "config": {}
+}
