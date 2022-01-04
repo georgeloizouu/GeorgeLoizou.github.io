@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ETH daily price",
+  "title": {
+    "text": "Ethereum (ETH): Daily Price ",
+    "subtitle": "Ethereum approximately one year before and after COVID-19",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "rgb(245, 164, 43)",
+    "subtitleColor": "#0b3853"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/data_FRED-CBETHUSD.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "height": 290,
+  "width": 300,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "linear",
+    "color": "steelblue"
+  },
+  "transform": [
+    {"calculate": "timeParse(datum.date, '%d/%m/%Y')", "as": "Date"},
+    {"calculate": "year(datum.date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2018,
+        "max": 2021,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2018,
+        "max": 2021,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "labelOverlap": false,
+        "labelAngle": -45,
+        "domainColor": "dimgrey",
+        "labelColor": "#122b39",
+        "tickColor": "black",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {
+        "grid": false,
+        "domainColor": "dimgrey",
+        "labelColor": "#122b39",
+        "tickColor": "black",
+        "gridColor": "black",
+        "format": "$,.5"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
+      {"field": "value", "type": "quantitative", "title": "Price in $"}
+    ]
+  }
+}
