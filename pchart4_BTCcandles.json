@@ -14,7 +14,7 @@
   },
   "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
   "data": {
-    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/candlestickdata"
+    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2020-03-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4"
   },
   "encoding": {
     "x": {
