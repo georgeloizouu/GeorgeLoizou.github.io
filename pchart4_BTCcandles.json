@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 300,
+  "description": "A Bitcoin candlestick chart inspired by an example in Protovis (http://mbostock.github.io/protovis/ex/candlestick.html)",
+  "title": {
+    "text": "Bitcoin (BTC): Trading Range",
+    "subtitle": "Bitcoin after WHO declared COVID-19 a pandemic on March 11th, 2020",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "rgb(245, 164, 43)",
+    "subtitleColor": "#0b3853"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/candlestickdata"
+  },
+  "encoding": {
+    "x": {
+      "field": "time_period_start",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "labelOverlap": false,
+        "labelAngle": -45
+      }
+    },
+    "tooltip": [
+      {
+        "field": "time_period_start",
+        "type": "temporal",
+        "format": "%b%d",
+        "title": "Date"
+      },
+      {"field": "price_high", "type": "quantitative", "title": "Price High"},
+      {"field": "price_low", "type": "quantitative", "title": "Price Low"},
+      {"field": "price_open", "type": "quantitative", "title": "Price Open"},
+      {"field": "price_close", "type": "quantitative", "title": "Price Close"}
+    ],
+    "y": {
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"format": "$,.5", "title": null, "grid": false}
+    },
+    "color": {
+      "legend": {"labelColor": "black", "orient": "bottom-right"},
+      "condition": {
+        "test": "datum.price_open < datum.price_close",
+        "value": "#06982d"
+      },
+      "value": "#ae1325"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {"y": {"field": "price_low"}, "y2": {"field": "price_high"}}
+    },
+    {
+      "mark": "bar",
+      "encoding": {"y": {"field": "price_open"}, "y2": {"field": "price_close"}}
+    }
+  ]
+}
