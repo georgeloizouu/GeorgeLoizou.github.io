@@ -3,7 +3,7 @@
   "description": "Bitcoin (BTC) daily price",
   "title": {
     "text": "Bitcoin (BTC): Daily Price ",
-    "subtitle": "BTC price evolution from 2015 to 2021",
+    "subtitle": "BTC price evolution from 2015 to 2021 Source:Coinbase",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 11,
     "anchor": "start",
