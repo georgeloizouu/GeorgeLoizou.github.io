@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "COVID-19 Media Hype Index",
+  "title": {
+    "text": "COVID-19: Media Hype Index (MHI) ",
+    "subtitle": "Evolution of COVID19 MHI in 2020-2021 ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "rgb(245, 164, 43)",
+    "subtitleColor": "#0b3853"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/fngvsmhidata.csv"
+  },
+  "height": 292,
+  "width": 300,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "linear",
+    "color": "#eb3922",
+    "strokeWidth": 1.4
+  },
+  "transform": [
+    {"calculate": "timeParse(datum.date, '%d/%m/%Y')", "as": "Date"},
+    {"calculate": "year(datum.date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2020,
+        "max": 2021,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2020,
+        "max": 2021,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "labelOverlap": false,
+        "labelAngle": -45,
+        "domainColor": "dimgrey",
+        "labelColor": "#122b39",
+        "tickColor": "black",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "MHI",
+      "type": "quantitative",
+      "title": "",
+      "axis": {
+        "grid": false,
+        "domainColor": "dimgrey",
+        "labelColor": "#122b39",
+        "tickColor": "black",
+        "gridColor": "black"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
+      {"field": "MHI", "type": "quantitative", "title": "Media Hype Index"}
+    ]
+  }
+}
