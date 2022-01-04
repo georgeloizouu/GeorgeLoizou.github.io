@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "UK vs Australia GDP growth rate",
-    "subtitle": "UK's GDP growth vs Australia's GDP growth compared 2015-2019 Source: WorldBank",
+    "subtitle": "GDP growth compared 2015-2019 Source: WorldBank",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
