@@ -2,10 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "COVID-19 Media Hype Index",
   "title": {
-    "text": "COVID-19: Media Hype Index (MHI) ",
-    "subtitle": "Evolution of COVID19 MHI in 2020-2021 ",
+    "text": "COVID-19: Media Hype Index (MHI)",
+    "subtitle": "A value of 60 indicates that 60% of all news globally is talking about COVID",
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 10,
     "anchor": "start",
     "color": "rgb(245, 164, 43)",
     "subtitleColor": "#0b3853"
@@ -71,6 +71,7 @@
     },
     "y": {
       "field": "MHI",
+      "scale": {"domain": [0, 100]},
       "type": "quantitative",
       "title": "",
       "axis": {
