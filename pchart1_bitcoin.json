@@ -3,9 +3,9 @@
   "description": "Bitcoin (BTC) daily price",
   "title": {
     "text": "Bitcoin (BTC): Daily Price ",
-    "subtitle": "BitCoin approximately one year before and after COVID-19",
+    "subtitle": "Bitcoin approximately one year before and after COVID-19",
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 10,
     "anchor": "start",
         "color": "rgb(245, 164, 43)",
     "subtitleColor": "#0b3853"
