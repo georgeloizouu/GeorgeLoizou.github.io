@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Regression chart",
   "title": {
-    "text": "Bitcoin price and Coronavirus Media Hype Index",
-    "subtitle": "Relationship between BTC/USD and Covid Media Hype Index in March 2020",
+    "text": "March 2020 :BTC and Covid MHI ",
+    "subtitle": "Relationship between BTC/USD and Covid Media Hype Index 01/20 - 20/12",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 11,
     "anchor": "start",
@@ -11,8 +11,16 @@
     "subtitleColor": "#0b3853"
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/march2020regdata.csv"
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myregressiondata.2.csv"
   },
+  "transform": [{"filter": "datum.month==Month"}],
+  "params": [
+    {
+      "name": "Month",
+      "value": 3,
+      "bind": {"input": "range", "min": 1, "max": 24, "step": 1}
+    }
+  ],
   "width": 300,
   "height": 300,
   "layer": [
@@ -38,7 +46,11 @@
       "transform": [{"regression": "btc_price", "on": "MHI"}],
       "encoding": {
         "x": {"field": "MHI", "type": "quantitative"},
-        "y": {"field": "btc_price", "type": "quantitative"}
+        "y": {
+          "field": "btc_price",
+          "scale": {"domain": [0, 70000]},
+          "type": "quantitative"
+        }
       }
     },
     {
