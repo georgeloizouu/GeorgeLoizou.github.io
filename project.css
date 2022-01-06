@@ -1,13 +1,10 @@
-/*this is my project CSS file */
-
+/*George Loizou, Data Science 2021
+Project CSS                     */
 
 body{
-
-    background-color:#122b39 ;
-    max-width: 450px;
-    margin: auto;
+  background-color:#0b3853  ;
+    
 }
-
 h1{
     size: initial;
     font-size: xx-large;
@@ -20,24 +17,64 @@ h3{
     font-family: 'Poppins', sans-serif ;
 }
 
-p{font-family: 'Poppins', sans-serif;
-color: rgb(255, 255, 255);
-font-size: 20px; 
+p{
+color: rgb(255,253,208);
+font-weight: 300;
+font-family: 'Open Sans', sans-serif;
+padding: 10px;
+width: 700px;
+text-align: left;
+margin: 0 auto;
+max-width: min(90vw, 815px);
+}
+.text-center {
+text-align: center;
+}
+#aimlist {
+    text-align: left;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+}
+#main {
+    line-height: 1.3;
+    position: relative;
 }
 
+li {
+    margin: 20px;
+    color:rgb(255,253,208);
+}
+
+
 header {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 55px; 
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 100px; 
     font-weight: bold;
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center;  
 }
 
+.title {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
 .title1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'M PLUS 1 Code', sans-serif;
     color: rgb(245, 164, 43);
-    font-size: 15px; 
+    font-size: 25px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
+.title2 {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: rgb(245, 164, 43);
+    font-size: 20px; 
     letter-spacing: 1px; 
     line-height: 1; 
     text-align: center;
@@ -54,50 +91,108 @@ header {
 .white {
     color: #f3f0f0;
 }
-
-
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 15px;
+    color: white;
+  }
 .chart {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    width: 400px;
-    height: 390px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 410;
+    height: flex;
+    border: #e6edf0 solid 4px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+    background-color: #ffffff;
+    transition: border-radius 400ms, flex-grow 1000ms;
+  }
+  .chart2 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 410;
+    height: flex;
+    border: #e6edf0 solid 4px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+    background-color: #ffffff;
+    transition: border-radius 400ms, flex-grow 1000ms;
+  }
+.pngchart {
     margin: 10px;
     padding: 5px;
     background-color: White;
-    border: #2a9d8f solid 5px;
+    border: #e6edf0 solid 4px;
     border-radius: 10px;
- /*font-family: 'Helvetica Neue', sans-serif;*/
     font-family: Inter,sans-serif;
     font-size: 10pxp;
+    transition: border-radius 400ms, flex-grow 1000ms;
 }
+.chart:hover {
+    border-color: rgb(245, 164, 43);
+    border-radius: 5px;
+    flex-grow: 0.1;
+  }
+  .chart2:hover {
+    border-color: rgb(245, 164, 43);
+    border-radius: 5px;
+    flex-grow: 0.1;
+  }
+  .pngchart:hover {
+    border-color: rgb(245, 164, 43);
+    border-radius: 5px;
+    flex-grow: 0.1;
+  }
 
 .container {
-    background-color: #122b39;
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
-    margin: auto;
-
 }
 
+.container2 {
+    display: flex;
+    justify-content: center;
+}
+.datacontainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: #e6edf0 solid 4px;
+    border-radius: 10px;
+}
+
+
     
+    
+    #container {
+        text-align: center;
+      } 
+      
+      
+  
+/*LOADER idea from https://www.w3schools.com/howto/howto_css_loader.asp*/
     #loader {
         margin: 150px auto 50px auto;
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border: 16px solid Gainsboro;
         border-radius: 50%;
-        border-top: 16px solid #9d6f2a;
+        border-top: 16px solid rgb(207, 129, 12);
+        border-right: 16px solid green;
+        border-bottom: 16px solid rgb(0, 17, 255);
+        border-left: 16px solid rgb(255, 255, 255);
         -webkit-animation: spin 2s linear infinite;
         animation: spin 2s linear infinite;
     }
     
-    #loadermsg {
+    #loadermessage {
         position: relative;
         font-weight: bold;
         font-family: Inter,sans-serif;
-        color: #E9C46A;
+        color: rgb(207, 129, 12);
         font-size: 20px; 
         letter-spacing: 1px; 
         line-height: 1; 
@@ -113,49 +208,115 @@ header {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
-    #container {
-        text-align: center;
-      }    
     
-    /* Button 07 */
-    .button-07 {
-        align-items: center;
-        margin: auto;
-        background-color: rgb(207, 129, 12);
-        border: 2px solid #111;
-        border-radius: 8px;
-        box-sizing: border-box;
-        color: rgb(233, 227, 227);
-        cursor: pointer;
-        display: inline-block;
-        font-family: Inter,sans-serif;
-        font-size: 16px;
-        height: 48px;
-        justify-content: center;
-        line-height: 24px;
-        max-width: 100%;
-        padding: 0 25px;
+    /* Animation from https://www.w3schools.com/w3css/w3css_animate.asp */
+    .fadeanimation {
         position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+    }
+    
+    @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+    }
+    
+    @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+    }
+    
+    #Div01 {
+        display: none;
         text-align: center;
-        text-decoration: none;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        }
+    }
+
+    /* Buttons layout and code from https://getcssscan.com/css-buttons-examples */
+.button-73 {
+    align-items: center;
+    margin: 10px;
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-73:hover {
+    background-color: rgb(207, 129, 12);
+    box-shadow: rgb(207, 129, 12) 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button-73:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button-73 {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  } 
+  /* Practice button*/
+  .button-07 {
+    align-items: center;
+    margin: 10px;
+    background-color: rgb(207, 129, 12);
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
     
     .button-07:after {
-        background-color: #111;
-        border-radius: 8px;
-        content: "";
-        height: 48px;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        top: -2px;
-        transform: translate(8px, 8px);
-        transition: transform .2s ease-out;
-        z-index: -1;
-    }
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
     
     .button-07:hover:after {
         transform: translate(0, 0);
@@ -170,12 +331,53 @@ header {
         outline: 0;
     }
     
-    @media (min-width: 768px) {
+    @media (max-width: 480px) {
         .button-07 {
-        padding: 0 40px;
-      }
-      
-      
-      
-
-}
+            margin: 5px;
+            font-size: 12px;
+        }
+        header {
+            font-size: 65px; 
+        }
+        .chart {
+            width: 380px;
+        }
+        .title1 {
+            font-size: 15px;
+        }
+        #loadermsg {
+            font-size: 15px;
+        }
+        .button-07 {
+            padding: 0 20px;
+        } 
+        .button-07:after {
+            transform: translate(6px, 6px);
+        }
+    }
+     /* Button for code and data*/
+        .cbutton {
+            background-color: transparent;
+            border: 1px solid rgb(241, 240, 244);
+            color: rgb(241, 240, 244);
+            font-family: 'Roboto', sans-serif;
+            line-height: 16px;
+            font-weight: 600;
+            border-radius: 150px;
+            box-sizing: content-box;
+            align-items: flex-start;
+            display: inline-block;
+            font-size: 12px;
+            margin: 1px 2px 1px 2px;
+            text-decoration: none;
+            max-width: 100px;
+            outline-offset: 2px;
+            overflow: hidden;
+            padding: 5px 12px;
+            text-align: left;
+            text-overflow: ellipsis;
+            transition: border-color,background-color .5s ease;
+            white-space: nowrap;
+          }
+       
+    
