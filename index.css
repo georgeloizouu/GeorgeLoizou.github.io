@@ -165,7 +165,7 @@ body{
           border: 16px solid Gainsboro;
           border-radius: 50%;
           border-top: 16px solid rgb(207, 129, 12);
-          border-right: 16px solid green;
+          border-right: 16px solid rgb(255,253,208);
           border-bottom: 16px solid rgb(0, 17, 255);
           border-left: 16px solid rgb(255, 255, 255);
           -webkit-animation: spin 2s linear infinite;
@@ -365,5 +365,59 @@ body{
            transition: border-color,background-color .5s ease;
            white-space: nowrap;
          }
-      
+          /* Background animation from Chris Smith https://www.sliderrevolution.com/resources/css-animated-background/ */
+         html {
+            height:100%;
+          }
+          
+          body {
+            margin:0;
+          }
+          
+          .bg {
+            animation:slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #e2e1bf 50%, #0b3853 50%);
+            bottom:0;
+            left:-50%;
+            opacity:.5;
+            position:fixed;
+            right:-50%;
+            top:0;
+            z-index:-1;
+          }
+          
+          .bg2 {
+            animation-direction:alternate-reverse;
+            animation-duration:4s;
+          }
+          
+          .bg3 {
+            animation-duration:5s;
+          }
+          
+          .content {
+            background-color:rgba(255,255,255,.8);
+            border-radius:.25em;
+            box-shadow:0 0 .25em rgba(0,0,0,.25);
+            box-sizing:border-box;
+            left:50%;
+            padding:10vmin;
+            position:fixed;
+            text-align:center;
+            top:50%;
+            transform:translate(-50%, -50%);
+          }
+          
+          h1 {
+            font-family:monospace;
+          }
+          
+          @keyframes slide {
+            0% {
+              transform:translateX(-25%);
+            }
+            100% {
+              transform:translateX(25%);
+            }
+          }
    
