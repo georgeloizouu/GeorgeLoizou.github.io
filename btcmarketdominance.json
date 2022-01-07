@@ -1,39 +1,41 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/currencies/ticker?key=m_9d4d86216691272e19366cee2092216e2d4ae63e&ids&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=10&page=1"
+  },
   "title": {
-    "text": "Market Dominance: Top 3 cryptocurrencies vs Rest",
-    "subtitle": "Percentage (%) market dominance as of 04/01/2022",
+    "text": "Market Dominance of Top Cryptocurrencies",
+    "subtitle": " Percentage market dominance live from Nomics API",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
-    "color": "rgb(245, 164, 43)",
-    "subtitleColor": "#0b3853"
+    "color": "black"
   },
-  "data": {
-    "values": [
-      {"Cryptocurrency": "Bitcoin(BTC)", "Percentage Dominance": 39.4664},
-      {"Cryptocurrency": "Ethereum(ETH)", "Percentage Dominance": 20.2811},
-      {"Cryptocurrency": "Binance Coin(BNB)", "Percentage Dominance": 3.8308},
-      {"Cryptocurrency": "Rest", "Percentage Dominance": 36.4217}
-    ]
-  },
+  "transform": [
+    {
+      "filter": {
+        "field": "currency",
+        "oneOf": ["BTC", "ETH", "XRP", "BNB", "ADA"]
+      }
+    }
+  ],
   "height": 300,
   "width": 230,
   "mark": {
     "type": "arc",
-    "innerRadius": 75,
-    "stroke": "#000000",
+    "innerRadius": 70,
+    "stroke": "#2e2f2f",
     "tooltip": true
   },
   "encoding": {
-    "theta": {"field": "Percentage Dominance", "type": "quantitative"},
+    "theta": {"field": "market_cap_dominance", "type": "quantitative"},
     "color": {
-      "field": "Cryptocurrency",
+      "field": "name",
+      "title": "Cryptocurrency",
       "type": "nominal",
       "scale": {"scheme": "category10"},
       "sort": "ascending",
       "legend": {"orient": "left", "fillColor": "#ffffff", "padding": 3}
     }
-  },
-  "config": {}
+  }
 }
