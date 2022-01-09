@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {
-    "text": "COVID-19 Cases: UK upper tier local authority",
-    "subtitle": "New cases by publish date, rolling rate",
+    "text": "COVID-19: UK upper tier local authority",
+    "subtitle": "New cases by publish date, rolling rate 2021",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -74,8 +74,8 @@
       "filter": {
         "field": "date",
         "range": [
-          {"year": 2020, "month": "dec", "date": 5},
-          {"year": 2050, "month": "dec", "date": 30}
+          {"year": 2021, "month": "jan", "date": 1},
+          {"year": 2021, "month": "dec", "date": 30}
         ]
       }
     }
