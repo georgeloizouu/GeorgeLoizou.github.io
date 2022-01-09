@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- George Loizou, Data Science 2021 -->
+
+<!-- George Loizou, Data Science 2021 -->
 
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
 
-  <link rel="stylesheet" href="project.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+<link rel="stylesheet" href="project.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+</style>
+</style>
+
 
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+<!-- Tab name -->
+<title>Project</title>
 </head>
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
@@ -25,11 +38,222 @@
 
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
-
-<body>
-
-  <h1>DATA SCIENCE 2021</h1>
-  <p><strong>George Loizou</strong></p>
-<p><strong>Student ID:1819940</strong></p>
+<body onload="myFunction()"> 
+  <!-- ///////////////////  LOADER  //////////////////////////////////// -->
+<div id="loader"></div>
   
-  </html>
+<div id="loadermessage">Loading data...</div>
+ 
+<div style="display:none;" id="Div01" class="fadeanimation">
+
+<header><span class="orange">Data</span><span class="white">Science</span></header>
+  
+
+<p class=title>The impact of COVID19 Media Hype on the cryptocurrency market</p>
+    <div class="container">
+   <button class="button-73" onclick="location.href='index.html'">Home</button>
+   <button class="button-73" onclick="location.href='portofolio.html'">Portfolio</button>
+   <button class="button-73" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
+</div>
+
+<!-- ///////////////////CHARTS BEGIN HERE//////////////////////////////////// -->
+<section id="main">
+  <p class=title2><span class="bold">Project aims</span></p>
+        <p>The project aims to examine how COVID19-Media Hype affected the cryptocurrency market.
+             First, I aim to find when the effect started appearing by looking at the evolution of the COVID19 Media Hype Index and the two most prominent cryptocurrencies: Bitcoin and Ethereum.
+             Then, I examine Bitcoin’s importance to identify how the market behaves, before establishing the relationship between the price of Bitcoin
+             and COVID-19-Media Hype. Lastly, I examine how cryptocurrency market sentiment changed as COVID-19-Media Hype increased, using data on the Cryptocurrency Fear&Greed (FNG) Index.</p>
+</section>
+<hr>
+
+<p class=title1><span class="bold">Introduction</span></p>
+<div class="container">
+<!--Chart 1 -->
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "pchart1_bitcoin.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+  <!--Chart 2 -->
+  <div class="chart" id="chart2">
+    <script>
+      var myChart2 = "pchart2_ethereum.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+</div>
+ <!--Chart 3 -->
+ <div class="chart" id="chart3">
+  <script>
+    var myChart3 = "pchart3_covid19mhi.json";
+    vegaEmbed('#chart3', myChart3);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myinteractivedata">Data(BTC)</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart1_bitcoin.json">Code(BTC)</a>
+      <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/data_FRED-CBETHUSD.json">Data(ETH)</a>
+      <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart2_ethereum.json">Code(ETH)</a>
+      <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/fngvsmhidata.csv">Data(MHI)</a>
+      <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart3_covid19mhi.json">Code(MHI)</a>
+</div>
+<p>Looking at the evolution of Bitcoin and Ethereum, in early 2020, both experience a reduction in their price, which seems to begin in March. 
+  Evidently, when we look at the COVID-19 MHI, it starts to increase rapidly in early March 2020, which corresponds to the time Bitcoin and Ethereum saw their USD price fall. 
+  But did COVID19-media hype cause these price dips?</p>
+<p class=title1><span class="bold">Bitcoin's effect on the market </span></p>
+<p>Firstly, it is important to understand that Bitcoin has the final word when it comes to cryptocurrency market sentiment. 
+  As shown on the chart below, Bitcoin and Etherium combined, usually represent approximately 60% of the cryptocurrency market dominance.
+  Compared to the market dominance of the rest cryptocurrencies, it is evident that BTC and ETH have a strong effect on the whole market.
+  However, Bitcoin's market dominance is still twice the one of Ethereum's. Regressing BTC/USD on ETH/USD, from the start of the pandemic until now, yields an r-squared value of 0.82. 
+  In this model, this indicates that 82% of the variation in Ethereum's price is explained by the price of Bitcoin, showing how much changes in Bitcoin's price can affect the market. 
+  </p>
+<div class='container'>
+   <!--Chart 3.1-->
+  <div class="chart" id="chart31">
+    <script>
+      var myChart31 = "btcmarketdominance.json";
+      vegaEmbed('#chart31', myChart31);
+    </script>
+  </div>
+<img src='chart16_ETHvsBTC.png' class='pngchart'>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://nomics.com/">API</a>
+      <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/btcmarketdominance.json">Code</a>
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myregressiondata.csv">Regression Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/BTCvsETH.ipynb">ColabNotebook</a>
+</div>
+<hr>
+
+<p class=title1><span class="bold">COVID19 declared a pandemic</span></p>
+<p>Having established Bitcoin’s importance, it is useful to look at what happened to it in March 2020, when the WorldHealthOrganisation declared COVID-19 a pandemic. 
+  Being declared a pandemic brought COVID-19 a lot of media attention, with the media-hype index increasing from 28.57 on March 10 to 69.2 by the end of the month. 
+  The price dip on March 11 is evident on the candlestick chart. Bitcoin's highest price of $8043 on March 10 fell to a price low of $4631 on March 12; a decrease of 42%. 
+  However, can this price fall be attributed to COVID-19 Media Hype?</p>
+
+  <!--Chart 4 -->
+    <div class="candlechart" id="chart4">
+        <script>
+          var myChart4 = "pchart4_BTCcandles.json";
+          vegaEmbed('#chart4', myChart4);
+        </script>
+  </div>
+    <div class="container">
+      <a class="cbutton"
+          href="https://www.coinapi.io/">API</a>
+      <a class="cbutton"
+          href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart4_BTCcandles.json">Code</a>
+    </div>
+    <p>The regression chart below shows the relationship between BTC/USD and COVID-19 MHI by month, from Jan2020 to Dec2021.
+      A regression of COVID-19 MHI on BTC/USD in March 2020 yields an r-squared of 0.59, meaning 59% of the variation in BTC/USD in March 2020 can be explained by the MHI. 
+      In this model, this is sufficient to indicate a moderate negative correlation: as COVID-19-media hype increased, BTC/USD decreased. Did that affect the whole market? 
+    </p>
+    <div class="container">
+    <!--Chart 5 -->
+    <div class="chart" id="chart5">
+      <script>
+        var myChart5 = "pchart5_BTCvsMHIregression.json";
+        vegaEmbed('#chart5', myChart5);
+      </script>
+  </div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/BTCvsMHI_interactiveregression.csv">Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart5_BTCvsMHIregression.json">Code</a>
+</div>
+<hr>
+ <p class=title1><span class="bold">The Crypto Fear and Greed (FNG) Index</span></p>
+ <p>
+  To look at this, I charted the Crypto FNG together with the COVID-19 MHI. The lower the FNG Index value, the higher the “fear” about investing in cryptocurrencies is in the market. 
+  Again, there seems to be a large fall in the FNG value in March 2020 that persists until the end of the month, showing that there was extreme fear in the market when COVID19-media hype started peaking.
+ </p>
+<div class="container">
+<!--Chart 6 -->
+<div class="chart" id="chart6">
+  <script>
+    var myChart6 = "pchart6_FNGvsMHI.json";
+    vegaEmbed('#chart6', myChart6);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/fngvsmhidata.csv">Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/pchart6_FNGvsMHI.json">Code</a>
+</div>
+<p>
+  Seemingly, evidence of COVID19-media hype affecting the cryptocurrency market is stronger at early stages of the pandemic. As it can be seen on the FNG chart, when COVID19-media hype started falling, market sentiment improved. 
+  In some sense, this is because people eventually started adapting to COVID-19. This is proven by the interactive BTC/USD vs MHI regression chart, which shows that as the pandemic progressed, the r-squared value started decreasing.
+  However, cryptocurrencies are extremely volatile and are affected by many factors, such as other media influences as well as market regulations. 
+  Therefore, further work that would combine such factors would provide more evidence of how COVID-19 affected the market as the pandemic progressed.
+ </p>
+<hr>
+<p class=title2><span class="bold">Data used and how I accessed it</span></p>
+<div class="datacontainer">
+   <li>Cryptocurrency prices: from FRED using Colab(<a class="textLink"
+    href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/CoinbaseFredDownloader.ipynb"
+    style="color:rgb(245, 164, 43);">notebook</a>), <a class="textLink" href="https://www.investing.com/crypto/" style="color:rgb(245, 164, 43);">investing.com</a> and through API using
+    <a class="textLink" href="https://www.coinapi.io/" style="color:rgb(245, 164, 43);">coinapi.com</a>.</li>
+     <li>COVID19-media hype: through CSV files provided by<a class="textLink"href="https://coronavirus.ravenpack.com/" style="color:rgb(245, 164, 43);">RavenPackTeam</a>.</li>
+    <li>Cryptocurrency market dominance: using an API from <a class="textLink" href="https://nomics.com/" style="color:rgb(245, 164, 43);">Nomics</a> so that the
+    data updates automatically</li>
+    <li>FNG data: accessed through <a class="textLink" href="https://api.alternative.me/fng/?limit=735&format=csv&date_format=cn"style="color:rgb(245, 164, 43);">Alternative API </a> 
+    but worked more reliably when stored as CSV.</li>
+</div> 
+<hr>
+<p class=title2><span class="bold">Challenges in data cleaning and/or analysis</span></p>
+<div class="datacontainer">
+  <p>
+  The biggest challenge was finding COVID19-media hype data, managing to access it and cleaning it. Time was spent searching for media hype data and to access the data I contacted RavenPack who sent me CSV files that had to be cleaned using Excel as they included unnecessary data.
+  Other challenges include cleaning cryptocurrency price data that included commas. This interfered with analysis, therefore data-cleaning was done using GoogleColab(<a class="textLink" href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/BTCvsETHdatacleaning.ipynb"style="color:rgb(245, 164, 43);">Notebook</a>).
+  Joining COVID-19 MHI with cryptocurrency FNG and price data also proved a challenge. Different files had different time formats and they had to be manually edited in Excel before data-joins were performed.
+  The files for interactive charts had to be edited to include "year/month" values to work with Vega-lite transformations. Data analysis was simpler except from challenges in creating the candlestick chart
+  that were solved using the <a class="textLink" href="https://vega.github.io/vega/examples/"style="color:rgb(245, 164, 43);">Vega-Lite documentation and examples</a>.
+  </p>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 4000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loadermessage").style.display = "none";
+    document.getElementById("Div01").style.display = "block";
+  }
+</script>
+
+</body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
