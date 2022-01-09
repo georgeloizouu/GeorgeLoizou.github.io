@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Regression chart",
   "title": {
-    "text": "March 2020 :BTC and Covid MHI ",
-    "subtitle": "Relationship between BTC/USD and Covid Media Hype Index 01/20 - 12/21",
+    "text": "March 2020: BTC and Covid MHI ",
+    "subtitle": "Relationship during 01/20 - 12/21 (Month 3 = 03/20)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 11,
     "anchor": "start",
