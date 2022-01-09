@@ -2,15 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {
     "text": "COVID-19: UK upper tier local authority",
-    "subtitle": "New cases by publish date, rolling rate 2021",
+    "subtitle": "New cases by publish date, rolling sum 2021",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-  "description": "Coronavirus cases",
   "data": {
-    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv",
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/utla_2022-01-08.csv",
     "format": {"type": "csv"}
   },
   "height": 287,
@@ -83,10 +82,10 @@
   "encoding": {
     "x": {"field": "date", "type": "temporal", "title": null},
     "y": {
-      "field": "newCasesByPublishDateRollingRate",
+      "field": "newCasesByPublishDateRollingSum",
       "type": "quantitative",
       "title": null,
-      "scale": {"domain": [0, 1700]}
+      "scale": {"domain": [0, 11000]}
     },
     "color": {
       "field": "areaName",
