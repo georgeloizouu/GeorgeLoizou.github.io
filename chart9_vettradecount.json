@@ -9,7 +9,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-11-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4",
+    "url": "https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-11-01T00:00:00&limit=100&include_empty_items=false&apikey=D385D677-0D8C-4BEB-943C-1E6E447BD297",
     "format": {"type": "json"}
   },
   "height": 300,
