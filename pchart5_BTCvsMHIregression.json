@@ -11,7 +11,7 @@
     "subtitleColor": "#0b3853"
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myregressiondata.2.csv"
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/BTCvsMHI_interactiveregression.csv"
   },
   "transform": [{"filter": "datum.month==Month"}],
   "params": [
