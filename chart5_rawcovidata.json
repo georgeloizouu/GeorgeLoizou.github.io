@@ -16,7 +16,7 @@
     {
       "filter": {
         "field": "areaName",
-        "oneOf": ["Wolverhampton", "Westminster", "Barnsley"]
+        "oneOf": ["Wolverhampton", "Westminster", "Bradford"]
       }
     }
   ],
@@ -41,7 +41,7 @@
       "type": "nominal",
       "scale": {"scheme": "inferno"},
       "title": null,
-      "legend": {"orient": "top-right"}
+      "legend": {"orient": "top-left"}
     }
   },
   "config": {}
