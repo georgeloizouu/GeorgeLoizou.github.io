@@ -9,7 +9,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
-
 <link rel="stylesheet" href="index.css">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
@@ -22,11 +21,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 </style>
 </style>
-<!--Background Animation-->
-<div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
-</div>
 
 
 <!--The next three lines allow the Vega embed-->
@@ -35,14 +29,14 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
 <!-- Tab name -->
-<title>George Loizou</title>
+<title>Portfolio</title>
 <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="96x96" />
 <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
 </head>
 
-<!-- ///////////////////  HEAD //////////////////////////////////// -->
+<!-- /////////////////// END HEAD //////////////////////////////////// -->
 
 
 
@@ -56,29 +50,292 @@
 <div style="display:none;" id="Div01" class="fadeanimation">
 
 <header><span class="orange">Data</span><span class="white">Science</span></header>
-<p class=title>George Loizou | Student ID: 1819940</p>
+  
+
+<p class=title>Data Visualisation Portfolio</p>
     <div class="container">
-   <button class="button-73" onclick="location.href='https://georgeloizouu.github.io/GeorgeLoizou.github.io/portfolio.html'">Portfolio</button>
-</div>
-   <div class="container">
-    <button class="button-73" onclick="location.href='https://georgeloizouu.github.io/GeorgeLoizou.github.io/project.html'">Project</button>
-</div>
-<div class="container">
+   <button class="button-73" onclick="location.href='index.html'">Home</button>
+    <button class="button-73" onclick="location.href='project.html'">Project</button>
    <button class="button-73" onclick="location.href='https://github.com/georgeloizouu/GeorgeLoizou.github.io'">Github</button>
 </div>
+
+<!-- ///////////////////CHARTS BEGIN HERE//////////////////////////////////// -->
+<p class=title1><span class="bold">Week 1 - Embedding</span></p>
+<p>Embedding three charts - Two that were given in class and one that was taken from the repository of RapidCharts. The link to the library from which the charts were taken can be found 
+  <a class="textLink"
+  href="https://rapidcharts.io/dashboards"
+  style="color:rgb(245, 164, 43);">here</a>
+</p>
+<div class="container">
+<!--Chart 1 -->
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+
+<!--Chart 2 -->
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "chart2_ukProductivity.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
 </div>
+
+<!--Chart 3 -->
+<div class="chart" id="chart3">
+  <script>
+    var myChart3 = "chart3_bitcoinrange.json";
+    vegaEmbed('#chart3', myChart3);
+  </script>
+</div>
+
+</div>
+
+<p class=title1><span class="bold">Week 2 - Hosting data (APIs and RAW data)</span></p>
+<p>Embedding two charts of my own design: (a) from a given API ,(b) from the same/related data saved to my GitHub.</p>
+<div class="container">
+<!--Chart 4 -->
+<div class="chart" id="chart4">
+  <script>
+    var myChart4 = "chart4_covidcases.json";
+    vegaEmbed('#chart4', myChart4);
+  </script>
+</div>
+<!--Chart 5 -->
+<div class="chart" id="chart5">
+  <script>
+    var myChart5 = "chart5_rawcovidata.json";
+    vegaEmbed('#chart5', myChart5);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=newCasesByPublishDateRollingSum&format=csv">a)Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart4_covidcases.json">a)Code</a>
+      <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/utla_2022-01-08.csv">b)Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart5_rawcovidata.json">b)Code</a>
+</div>
+
+<p class=title1><span class="bold">Week 3 - Editing data, writing JSON by hand</span></p>
+<p>Two more charts. In the first one, I manipulated the GDP growth 
+  data I downloaded from WorldBank for the UK and Australia, in Excel to add the UK/AU ratio. In the second one, I manually wrote “in-line” JSON points.</p>
+<div class="container">
+
+<!--Chart 6 -->
+<div class="chart" id="chart6">
+  <script>
+    var myChart6 = "chart6_gdpgrowth.json";
+    vegaEmbed('#chart6', myChart6);
+  </script>
+</div>
+
+<!--Chart 7 -->
+<div class="chart" id="chart7">
+  <script>
+    var myChart7 = "chart7_ukbeachlitter.json";
+    vegaEmbed('#chart7', myChart7);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/UKandAustraliaGDPratio.csv">UK/AU Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart6_gdpgrowth.json">UK/AU Code</a>
+      <a class="cbutton"
+      href="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/chartENV17.csv">Litter Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart7_ukbeachlitter.json">Litter Code</a>
+</div>
+
+<p class=title1><span class="bold">Week 4 - API driven charts</span></p>
+<p>Two charts of my own design from two separate APIs that I signed up for & gained access to. Links to the data (coinAPI:<a class="textLink"
+  href="https://rest.coinapi.io/v1/ohlcv/VET/USD/history?period_id=8HRS&time_start=2021-11-01T00:00:00&limit=100&include_empty_items=false&apikey=96F17CD1-7520-40B1-B729-1507D00D0DB4"
+  style="color:rgb(245, 164, 43);">here</a>) (AlphaVantageAPI:<a class="textLink"
+  href="https://www.alphavantage.co/query?function=INFLATION_EXPECTATION&apikey=BCIX7LVQW458HQQK"
+  style="color:rgb(245, 164, 43);">here</a>)</p>
+<div class="container">
+
+<!--Chart 8 -->
+<div class="chart2" id="chart8">
+  <script>
+    var myChart8 = "chart8_usinflation.json";
+    vegaEmbed('#chart8', myChart8);
+  </script>
+</div>
+
+<!--Chart 9 -->
+<div class="chart2" id="chart9">
+  <script>
+    var myChart9 = "chart9_vettradecount.json";
+    vegaEmbed('#chart9', myChart9);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart8_usinflation.json">US Inflation Code</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart9_vettradecount.json">VET Code</a>
+</div>
+
+<p class=title1><span class="bold">Week 5 - API fetch and loops</span></p>
+<p>For these charts I batch-downloaded data from FRED API using fetch in GoogleColab, utilizing a loop as shown in class.</p>
+<div class="container">
+<!--Chart 10 -->
+<div class="chart" id="chart10">
+  <script>
+    var myChart10 = "chart10_USunemploymentrate.json";
+    vegaEmbed('#chart10', myChart10);
+  </script>
+</div>
+
+<!--Chart 11 -->
+<div class="chart" id="chart11">
+  <script>
+    var myChart11 = "chart11_ustreasuries.json";
+    vegaEmbed('#chart11', myChart11);
+  </script>
+</div>
+</div>
+  
+<div class="container">
+
+<!--Chart 12 -->
+<div class="chart" id="chart12">
+  <script>
+    var myChart12 = "chart12_consumption.json";
+    vegaEmbed('#chart12', myChart12);
+  </script>
+</div>
+
+<!--Chart 13 -->
+<div class="chart" id="chart13">
+  <script>
+    var myChart13 = "chart13_industrialproduction.json";
+    vegaEmbed('#chart13', myChart13);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/tree/main/FREDdata">FRED Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/Week5Homework.ipynb">Colab Notebook</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/tree/main/code%20for%20FRED%20charts">Code</a>
+</div>
+
+<p class=title1><span class="bold">Week 7 - Scraper</span></p>
+<p>I built my own scraper to collect data on the prices of several cars I was interested in.</p>
+<div class="container">
+<!--Chart 14 -->
+<div class="chart" id="chart14">
+  <script>
+    var myChart14 = "chart14_luxurycars.json";
+    vegaEmbed('#chart14', myChart14);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myscrapingdata.csv">Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/ScrapersHomework.ipynb">Colab Notebook</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart14_luxurycars.json">Code</a>
+</div>
+
+<p class=title1><span class="bold">Week 8 - Talking Economics</span></p>
+<p>During the 2nd "Talking Economics" session it was mentioned by Abi Adams Prassl that before lockdown the "employment rate in the UK hit a record high
+  of approximately 77%". Using data from statista.com, I created a chart showing that this is true. As shown in the chart, during early 2020
+  just before the COVID19 lockdown, employment was indeed at a record high of 76.6% on February 1st 2020.</p>
+<div class="container">
+  <!--Chart 15 -->
+<div class="chart" id="chart15">
+  <script>
+    var myChart15 = "chart15_ukemployment.json";
+    vegaEmbed('#chart15', myChart15);
+  </script>
+  </div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/UK%23employmentrate.csv">Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart15_ukemployment.json">Code</a>
+</div>
+
+
+<p class=title1><span class="bold">Week 9 - Advanced data analysis techniques: Regression</span></p>
+<p>This chart uses linear regression to show the relationship between BTC/USD and ETH/USD from the beginning of 2020 until late 2021 .
+  As shown the regression yields an R-Squared value of 0.82. In this model,this indicates that 82% of the variation in the price of Ethereum is explained by the price of Bitcoin.</p>
+<div class="container">
+    <img src='chart16_ETHvsBTC.png' class='pngchart'>
+    </div>
+    <div class="container">
+      <a class="cbutton"
+          href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myregressiondata.csv">Data</a>
+      <a class="cbutton"
+          href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/BTCvsETH.ipynb">Code</a>
+          <a class="cbutton"
+          href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/BTCvsETHdatacleaning.ipynb">Data Cleaning</a>
+    </div>
+
+
+<p class=title1><span class="bold">Week 10 - Interactivity</span></p>
+  <p>Two interactive charts. The first one uses sliders to select and adjust the time period and the second one uses a dropdown box that allows the selection of a specific area.</p>
+<div class="container">
+<!--Chart 17 -->
+<div class="chart" id="chart17">
+  <script>
+    var myChart17 = "chart17_btcgraphforproject.json";
+    vegaEmbed('#chart17', myChart17);
+  </script>
+</div>
+
+<!--Chart 18  -->
+<div class="chart" id="chart18">
+  <script>
+    var myChart18 = "chart18_interactivechart.json";
+    vegaEmbed('#chart18', myChart18);
+  </script>
+</div>
+</div>
+<div class="container">
+  <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/myinteractivedata">BTC Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart17_btcgraphforproject.json">BTC Code</a>
+      <a class="cbutton"
+      href="https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/utla_2022-01-08.csv">COVID Data</a>
+  <a class="cbutton"
+      href="https://github.com/georgeloizouu/GeorgeLoizou.github.io/blob/main/chart18_interactivechart.json">COVID Code</a>
+</div>
+
+
 <script>
   var myVar;
+
   function myFunction() {
     myVar = setTimeout(showPage, 4000);
   }
-function showPage() {
+
+  function showPage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loadermessage").style.display = "none";
     document.getElementById("Div01").style.display = "block";
   }
 </script>
+
 </div>
+
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
