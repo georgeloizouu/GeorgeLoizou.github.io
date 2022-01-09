@@ -9,14 +9,14 @@
     "color": "black"
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv",
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizou.github.io/main/utla_2022-01-08.csv",
     "format": {"type": "csv"}
   },
   "transform": [
     {
       "filter": {
         "field": "areaName",
-        "oneOf": ["Wolverhampton", "Bolton", "Barnsley"]
+        "oneOf": ["Wolverhampton", "Westminster", "Barnsley"]
       }
     }
   ],
@@ -31,7 +31,7 @@
       "axis": {"grid": false}
     },
     "y": {
-      "field": "newCasesByPublishDateRollingRate",
+      "field": "newCasesByPublishDateRollingSum",
       "type": "quantitative",
       "title": null,
       "axis": {"grid": false}
@@ -39,7 +39,7 @@
     "color": {
       "field": "areaName",
       "type": "nominal",
-      "scale": {"scheme": "set1"},
+      "scale": {"scheme": "inferno"},
       "title": null,
       "legend": {"orient": "top-right"}
     }
