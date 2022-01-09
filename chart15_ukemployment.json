@@ -14,7 +14,13 @@
   },
   "height": 300,
   "width": 300,
-  "mark": {"type": "line","color":"orangered", "point": false, "strokeWidth": 2, "opacity": 1},
+  "mark": {
+    "type": "line",
+    "color": "orangered",
+    "point": false,
+    "strokeWidth": 2,
+    "opacity": 1
+  },
   "encoding": {
     "x": {
       "field": "Date",
@@ -28,7 +34,16 @@
       "title": "Employment rate %",
       "axis": {"grid": true},
       "scale": {"domain": [60, 80]}
-    }
+    },
+     "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal",
+        "format": "%b-%d-%Y",
+        "title": "Date"
+      },
+      {"field": "Employment rate", "type": "quantitative", "title": "Employment rate"}
+    ]
   },
   "config": {}
 }
